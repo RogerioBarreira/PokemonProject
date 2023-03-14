@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailPokemonViewController: UIViewController {
     
@@ -45,6 +46,7 @@ class DetailPokemonViewController: UIViewController {
     
     func setupUI() {
         setupNamePokemon()
+        setupImagePokemon()
     }
     
     func setupNamePokemon() {
@@ -52,6 +54,7 @@ class DetailPokemonViewController: UIViewController {
     }
     
     func setupImagePokemon() {
+        viewDetailPokemon.imagePokemonDetail.sd_setImage(with: viewModelDetailPokemon.urlImage)
     
     }
     
