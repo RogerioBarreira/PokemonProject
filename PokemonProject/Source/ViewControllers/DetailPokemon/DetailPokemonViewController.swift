@@ -1,5 +1,5 @@
 //
-//  ListPokemonViewController.swift
+//  DetailPokemonViewController.swift
 //  PokemonProject
 //
 //  Created by Rogerio Marinner on 14/03/23.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class ListPokemonViewController: UIViewController {
+class DetailPokemonViewController: UIViewController {
     
-    lazy var viewListPokemon: ListPokemonView = {
-        let view = ListPokemonView()
+    lazy var viewDetailPokemon: DetailPokemonView = {
+        let view = DetailPokemonView()
         view.backgroundColor = .systemBackground
         return view
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func loadView() {
-        self.view = viewListPokemon
+        self.view = viewDetailPokemon
     }
 }
