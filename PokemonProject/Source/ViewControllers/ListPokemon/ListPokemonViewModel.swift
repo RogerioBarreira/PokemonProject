@@ -9,4 +9,25 @@ import Foundation
 
 class ListPokemonViewModel: NSObject {
     
+    private let worker = Worker()
+    private var myPokemon: ListPokemon?
+    
+    var numberOfRows: Int {
+        myPokemon?.results?.count ?? 0
+    }
+    
+    func cellForRows(indexPath: IndexPath) -> Result? {
+        return myPokemon?.results?[indexPath.row]
+    }
+    
+    func requestListPokemonViewModel(completion: @escaping (Bool)-> Void) {
+        worker.workerListPokemon { myPokemon, success in
+            if success {
+                self.myPokemon = myPokemon
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
 }
