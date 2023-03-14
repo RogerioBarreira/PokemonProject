@@ -23,6 +23,7 @@
 		309F18B429C100ED002997BA /* DetailPokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F18B329C100ED002997BA /* DetailPokemonViewModel.swift */; };
 		309F18B629C104DC002997BA /* RequestGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F18B529C104DC002997BA /* RequestGenerics.swift */; };
 		30E9ADD529C1251000984004 /* CellListPokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9ADD429C1251000984004 /* CellListPokemonTableViewCell.swift */; };
+		30E9ADD829C12F2600984004 /* CellDetailPokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9ADD729C12F2600984004 /* CellDetailPokemonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		309F18B329C100ED002997BA /* DetailPokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPokemonViewModel.swift; sourceTree = "<group>"; };
 		309F18B529C104DC002997BA /* RequestGenerics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGenerics.swift; sourceTree = "<group>"; };
 		30E9ADD429C1251000984004 /* CellListPokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellListPokemonTableViewCell.swift; sourceTree = "<group>"; };
+		30E9ADD729C12F2600984004 /* CellDetailPokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDetailPokemonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		309F18AE29C0FA93002997BA /* DetailPokemon */ = {
 			isa = PBXGroup;
 			children = (
+				30E9ADD629C12ED800984004 /* CellDetailPokemon */,
 				309F18B129C0FB0A002997BA /* DetailPokemonView.swift */,
 				309F18AF29C0FADA002997BA /* DetailPokemonViewController.swift */,
 				309F18B329C100ED002997BA /* DetailPokemonViewModel.swift */,
@@ -167,6 +170,14 @@
 				30E9ADD429C1251000984004 /* CellListPokemonTableViewCell.swift */,
 			);
 			path = CellListPokemon;
+			sourceTree = "<group>";
+		};
+		30E9ADD629C12ED800984004 /* CellDetailPokemon */ = {
+			isa = PBXGroup;
+			children = (
+				30E9ADD729C12F2600984004 /* CellDetailPokemonTableViewCell.swift */,
+			);
+			path = CellDetailPokemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				309F18B229C0FB0A002997BA /* DetailPokemonView.swift in Sources */,
 				3052B71E29C0EDE0006E1FC6 /* ListPokemonViewController.swift in Sources */,
 				3052B70329C0EBEB006E1FC6 /* AppDelegate.swift in Sources */,
+				30E9ADD829C12F2600984004 /* CellDetailPokemonTableViewCell.swift in Sources */,
 				309F18B629C104DC002997BA /* RequestGenerics.swift in Sources */,
 				3052B70529C0EBEB006E1FC6 /* SceneDelegate.swift in Sources */,
 				309F18B029C0FADA002997BA /* DetailPokemonViewController.swift in Sources */,

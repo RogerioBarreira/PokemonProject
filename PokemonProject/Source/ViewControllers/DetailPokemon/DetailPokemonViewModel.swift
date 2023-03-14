@@ -13,6 +13,30 @@ class DetailPokemonViewModel: NSObject {
     private var detailPokemon: DetailPokemon?
     private var result: Result?
     
+    var namePokemon: String {
+        detailPokemon?.name ?? ""
+    }
+    
+    var urlImage: URL? {
+        URL(string: detailPokemon?.sprites?.frontDefault ?? "")
+    }
+    
+    var numberOfRowsGameIndex: Int {
+        detailPokemon?.gameIndices?.count ?? 0
+    }
+    
+    var numberOfRowsAbility: Int {
+        detailPokemon?.abilities?.count ?? 0
+    }
+    
+    func cellForRowsGameIndex(indexPath: IndexPath) -> GameIndex? {
+        return detailPokemon?.gameIndices?[indexPath.row]
+    }
+    
+    func cellForRowsAbility(indexPath: IndexPath) -> Ability? {
+        return detailPokemon?.abilities?[indexPath.row]
+    }
+    
     var url: String {
         result?.url ?? ""
     }
