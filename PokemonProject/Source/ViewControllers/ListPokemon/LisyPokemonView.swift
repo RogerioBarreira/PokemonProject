@@ -1,5 +1,5 @@
 //
-//  LisyPokemonView.swift
+//  ListPokemonView.swift
 //  PokemonProject
 //
 //  Created by Rogerio Marinner on 14/03/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LisyPokemonView: UIView {
+class ListPokemonView: UIView {
     
     let myTableView: UITableView = {
         let tableView = UITableView()
