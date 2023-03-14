@@ -21,7 +21,8 @@ class ListPokemonViewModel: NSObject {
     }
     
     func requestListPokemonViewModel(completion: @escaping (Bool)-> Void) {
-        worker.workerListPokemon { myPokemon, success in
+        worker.workerListPokemon { [weak self] myPokemon, success in
+            guard let self = self else { return }
             if success {
                 self.myPokemon = myPokemon
                 completion(true)
