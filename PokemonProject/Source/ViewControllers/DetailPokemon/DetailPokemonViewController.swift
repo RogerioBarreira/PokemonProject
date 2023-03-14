@@ -9,6 +9,8 @@ import UIKit
 
 class DetailPokemonViewController: UIViewController {
     
+    let viewModelDetailPokemon = DetailPokemonViewModel()
+    
     lazy var viewDetailPokemon: DetailPokemonView = {
         let view = DetailPokemonView()
         view.backgroundColor = .systemBackground

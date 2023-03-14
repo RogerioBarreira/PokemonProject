@@ -22,4 +22,10 @@ class Coordinator: NSObject {
         let viewController = ListPokemonViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func startDetailPokemon(result: Result?) {
+        let viewController = DetailPokemonViewController()
+        viewController.viewModelDetailPokemon.getDetailPokemon(result: result)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }
