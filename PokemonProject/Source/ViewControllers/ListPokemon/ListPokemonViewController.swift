@@ -8,9 +8,18 @@
 import UIKit
 
 class ListPokemonViewController: UIViewController {
+    
+    lazy var viewListPokemon: LisyPokemonView = {
+        let view = LisyPokemonView()
+        view.backgroundColor = .systemBackground
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
+    }
+    
+    override func loadView() {
+        self.view = viewListPokemon
     }
 }

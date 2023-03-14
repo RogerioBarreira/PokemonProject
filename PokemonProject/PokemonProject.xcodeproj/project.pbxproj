@@ -13,6 +13,8 @@
 		3052B70F29C0EBED006E1FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3052B70D29C0EBED006E1FC6 /* LaunchScreen.storyboard */; };
 		3052B71E29C0EDE0006E1FC6 /* ListPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052B71D29C0EDE0006E1FC6 /* ListPokemonViewController.swift */; };
 		3052B72029C0EDF2006E1FC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052B71F29C0EDF2006E1FC6 /* Coordinator.swift */; };
+		309F18AB29C0F79C002997BA /* LisyPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F18AA29C0F79C002997BA /* LisyPokemonView.swift */; };
+		309F18AD29C0F967002997BA /* ListPokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F18AC29C0F967002997BA /* ListPokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3052B71029C0EBED006E1FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3052B71D29C0EDE0006E1FC6 /* ListPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPokemonViewController.swift; sourceTree = "<group>"; };
 		3052B71F29C0EDF2006E1FC6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		309F18AA29C0F79C002997BA /* LisyPokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisyPokemonView.swift; sourceTree = "<group>"; };
+		309F18AC29C0F967002997BA /* ListPokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				3052B71D29C0EDE0006E1FC6 /* ListPokemonViewController.swift */,
+				309F18AC29C0F967002997BA /* ListPokemonViewModel.swift */,
+				309F18AA29C0F79C002997BA /* LisyPokemonView.swift */,
 			);
 			path = ListPokemon;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				3052B71E29C0EDE0006E1FC6 /* ListPokemonViewController.swift in Sources */,
 				3052B70329C0EBEB006E1FC6 /* AppDelegate.swift in Sources */,
 				3052B70529C0EBEB006E1FC6 /* SceneDelegate.swift in Sources */,
+				309F18AD29C0F967002997BA /* ListPokemonViewModel.swift in Sources */,
+				309F18AB29C0F79C002997BA /* LisyPokemonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
