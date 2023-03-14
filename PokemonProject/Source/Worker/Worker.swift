@@ -26,7 +26,8 @@ class Worker: NSObject {
     }
     
     func workerDetailPokemon(urlString: String, completion: @escaping (DetailPokemon?,Bool)-> Void) {
-        requestGenerics.requestGenerics(urlString: urlString, method: .get, custom: DetailPokemon.self) { myDetailPokemon, success in
+        requestGenerics.requestGenerics(urlString: urlString, method: .get, custom: DetailPokemon.self) { [weak self] myDetailPokemon, success in
+            guard let self = self else { return }
             if success {
                 self.myPokemonDetail = myDetailPokemon
                 completion(myDetailPokemon,true)
