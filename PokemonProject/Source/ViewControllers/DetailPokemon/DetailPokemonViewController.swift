@@ -20,6 +20,8 @@ class DetailPokemonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Pokemon Detail"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         setupRequest()
         setupTableViews()
     }
