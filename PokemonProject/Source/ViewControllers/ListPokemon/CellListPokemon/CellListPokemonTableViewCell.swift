@@ -14,11 +14,12 @@ class CellListPokemonTableViewCell: UITableViewCell {
     let namePokemon: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.layer.backgroundColor = UIColor.systemBlue.cgColor
         label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.label.cgColor
+        label.layer.borderColor = UIColor.systemYellow.cgColor
         label.layer.cornerRadius = 12
         label.clipsToBounds = true
         return label

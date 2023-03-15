@@ -19,6 +19,8 @@ class ListPokemonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "List PoKemon"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         setupRequest()
     }
@@ -61,6 +63,7 @@ extension ListPokemonViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = viewListPokemon.myTableView.dequeueReusableCell(withIdentifier: CellListPokemonTableViewCell.identifier, for: indexPath) as? CellListPokemonTableViewCell {
+            cell.backgroundColor = .clear
             cell.setupCell(pokemon: viewModelListPokemon.cellForRows(indexPath: indexPath))
             return cell
         }

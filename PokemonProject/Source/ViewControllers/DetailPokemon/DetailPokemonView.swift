@@ -12,11 +12,12 @@ class DetailPokemonView: UIView {
     let namePokemonDetail: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 23, weight: .bold)
         label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.label.cgColor
+        label.layer.borderColor = UIColor.systemYellow.cgColor
+        label.layer.backgroundColor = UIColor.systemBlue.cgColor
         label.layer.cornerRadius = 12
         label.clipsToBounds = true
         return label
@@ -33,11 +34,12 @@ class DetailPokemonView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "GameIndex"
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 23, weight: .bold)
+        label.backgroundColor = .systemBlue
         label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.label.cgColor
+        label.layer.borderColor = UIColor.systemYellow.cgColor
         label.layer.cornerRadius = 12
         label.clipsToBounds = true
         return label
@@ -55,11 +57,12 @@ class DetailPokemonView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Abiliity"
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 23, weight: .bold)
+        label.backgroundColor = .systemBlue
         label.layer.borderWidth = 2
-        label.layer.borderColor = UIColor.label.cgColor
+        label.layer.borderColor = UIColor.systemYellow.cgColor
         label.layer.cornerRadius = 12
         label.clipsToBounds = true
         return label
@@ -106,8 +109,8 @@ class DetailPokemonView: UIView {
         NSLayoutConstraint.activate([
             imagePokemonDetail.topAnchor.constraint(equalTo: namePokemonDetail.bottomAnchor, constant: 1),
             imagePokemonDetail.centerXAnchor.constraint(equalTo: namePokemonDetail.centerXAnchor),
-            imagePokemonDetail.heightAnchor.constraint(equalToConstant: 150),
-            imagePokemonDetail.widthAnchor.constraint(equalToConstant: 150)
+            imagePokemonDetail.heightAnchor.constraint(equalToConstant: 200),
+            imagePokemonDetail.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -127,7 +130,7 @@ class DetailPokemonView: UIView {
             tableViewOne.topAnchor.constraint(equalTo: nameTableViewOne.bottomAnchor, constant: 2),
             tableViewOne.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             tableViewOne.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
-            tableViewOne.heightAnchor.constraint(equalToConstant: 100)
+            tableViewOne.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
