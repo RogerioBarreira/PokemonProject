@@ -19,6 +19,8 @@ class ListPokemonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "List PoKemon"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         setupTableView()
         setupRequest()
     }
@@ -40,9 +42,16 @@ class ListPokemonViewController: UIViewController {
             if success {
                 self.viewListPokemon.myTableView.reloadData()
             } else {
-                print("Erro Request")
+                self.showErrorMessage()
             }
         }
+    }
+    
+    func showErrorMessage() {
+        let alert = UIAlertController(title: Types.alertControllerTitle.rawValue, message: Types.alertMessage.rawValue, preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: Types.alertActionTitle.rawValue, style: .destructive)
+        alert.addAction(buttonOK)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -54,6 +63,7 @@ extension ListPokemonViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = viewListPokemon.myTableView.dequeueReusableCell(withIdentifier: CellListPokemonTableViewCell.identifier, for: indexPath) as? CellListPokemonTableViewCell {
+            cell.backgroundColor = .clear
             cell.setupCell(pokemon: viewModelListPokemon.cellForRows(indexPath: indexPath))
             return cell
         }
@@ -66,6 +76,6 @@ extension ListPokemonViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+        return viewModelListPokemon.heightForRow
     }
 }

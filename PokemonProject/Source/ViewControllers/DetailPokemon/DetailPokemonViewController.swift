@@ -20,6 +20,8 @@ class DetailPokemonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Pokemon Detail"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         setupRequest()
         setupTableViews()
     }
@@ -36,7 +38,6 @@ class DetailPokemonViewController: UIViewController {
     func setupTableViewOne() {
         viewDetailPokemon.tableViewOne.dataSource = self
         viewDetailPokemon.tableViewOne.register(CellDetailPokemonTableViewCell.self, forCellReuseIdentifier: CellDetailPokemonTableViewCell.identifier)
-
     }
     
     func setupTableViewTwo() {
@@ -55,7 +56,6 @@ class DetailPokemonViewController: UIViewController {
     
     func setupImagePokemon() {
         viewDetailPokemon.imagePokemonDetail.sd_setImage(with: viewModelDetailPokemon.urlImage)
-    
     }
     
     func setupRequest() {
@@ -66,9 +66,16 @@ class DetailPokemonViewController: UIViewController {
                 self.viewDetailPokemon.tableViewOne.reloadData()
                 self.viewDetailPokemon.tableViewTwo.reloadData()
             } else {
-                print("Erro Request DetailPokemon")
+                self.showErrorMessage()
             }
         }
+    }
+    
+    func showErrorMessage() {
+        let alert = UIAlertController(title: Types.alertControllerTitle.rawValue, message: Types.alertMessage.rawValue, preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: Types.alertActionTitle.rawValue, style: .destructive)
+        alert.addAction(buttonOK)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
