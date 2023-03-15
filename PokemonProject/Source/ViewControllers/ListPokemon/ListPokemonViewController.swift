@@ -40,9 +40,16 @@ class ListPokemonViewController: UIViewController {
             if success {
                 self.viewListPokemon.myTableView.reloadData()
             } else {
-                print("Erro Request")
+                self.showErrorMessage()
             }
         }
+    }
+    
+    func showErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: "Request Fail", preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: "OK", style: .destructive)
+        alert.addAction(buttonOK)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

@@ -36,7 +36,6 @@ class DetailPokemonViewController: UIViewController {
     func setupTableViewOne() {
         viewDetailPokemon.tableViewOne.dataSource = self
         viewDetailPokemon.tableViewOne.register(CellDetailPokemonTableViewCell.self, forCellReuseIdentifier: CellDetailPokemonTableViewCell.identifier)
-
     }
     
     func setupTableViewTwo() {
@@ -55,7 +54,6 @@ class DetailPokemonViewController: UIViewController {
     
     func setupImagePokemon() {
         viewDetailPokemon.imagePokemonDetail.sd_setImage(with: viewModelDetailPokemon.urlImage)
-    
     }
     
     func setupRequest() {
@@ -66,9 +64,16 @@ class DetailPokemonViewController: UIViewController {
                 self.viewDetailPokemon.tableViewOne.reloadData()
                 self.viewDetailPokemon.tableViewTwo.reloadData()
             } else {
-                print("Erro Request DetailPokemon")
+                self.showErrorMessage()
             }
         }
+    }
+    
+    func showErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: "Request Fail", preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: "OK", style: .destructive)
+        alert.addAction(buttonOK)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
