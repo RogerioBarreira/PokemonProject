@@ -70,8 +70,8 @@ class DetailPokemonViewController: UIViewController {
     }
     
     func showErrorMessage() {
-        let alert = UIAlertController(title: "Error", message: "Request Fail", preferredStyle: .alert)
-        let buttonOK = UIAlertAction(title: "OK", style: .destructive)
+        let alert = UIAlertController(title: Types.alertControllerTitle.rawValue, message: Types.alertMessage.rawValue, preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: Types.alertActionTitle.rawValue, style: .destructive)
         alert.addAction(buttonOK)
         self.present(alert, animated: true, completion: nil)
     }
