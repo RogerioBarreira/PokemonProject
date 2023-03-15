@@ -40,9 +40,16 @@ class ListPokemonViewController: UIViewController {
             if success {
                 self.viewListPokemon.myTableView.reloadData()
             } else {
-                print("Erro Request")
+                self.showErrorMessage()
             }
         }
+    }
+    
+    func showErrorMessage() {
+        let alert = UIAlertController(title: Types.alertControllerTitle.rawValue, message: Types.alertMessage.rawValue, preferredStyle: .alert)
+        let buttonOK = UIAlertAction(title: Types.alertActionTitle.rawValue, style: .destructive)
+        alert.addAction(buttonOK)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -66,6 +73,6 @@ extension ListPokemonViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+        return viewModelListPokemon.heightForRow
     }
 }

@@ -12,6 +12,10 @@ class ListPokemonViewModel: NSObject {
     private let worker = Worker()
     private var myPokemon: ListPokemon?
     
+    var heightForRow: CGFloat {
+        return 45
+    }
+    
     var numberOfRows: Int {
         myPokemon?.results?.count ?? 0
     }
